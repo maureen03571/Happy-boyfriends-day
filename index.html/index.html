@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Boyfriend's Day my love!</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                    url('images/music/WhatsApp Image 2025-10-03 at 18.10.30_7bdb9a10.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+            backdrop-filter: blur(5px);
+            margin-top: 20px;
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #e64392;
+            text-shadow: 0 0 10px rgba(83, 62, 73, 0.7);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .message {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            margin: 30px 0;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #ff69b4;
+        }
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 3px solid #ff69b4;
+            transition: transform 0.3s;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+        }
+        .photo:hover { transform: scale(1.1); }
+        .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #ff69b4;
+            transform: rotate(45deg);
+            opacity: 0.7;
+            animation: float 5s infinite ease-in-out;
+        }
+        .heart:before, .heart:after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: #ff69b4;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .heart:before { top: -10px; left: 0; }
+        .heart:after { top: 0; left: -10px; }
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(45deg); opacity: 0; }
+            10% { opacity: 0.7; }
+            90% { opacity: 0.7; }
+            100% { transform: translateY(-100px) rotate(45deg); opacity: 0; }
+        }
+        .music-control {
+            margin-top: 20px;
+            background: rgba(255, 105, 180, 0.8);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .music-control:hover {
+            background: rgba(255, 105, 180, 1);
+            transform: scale(1.05);
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .message { font-size: 1.2rem; }
+            .container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts-container" id="heartsContainer"></div>
+    <div class="container">
+        <h1>Happy Boyfriend's Day!</h1>
+        <div class="message">
+            <p>Dearest gentle reader,</p>
+            <p>Today i celebrate you not only as my boyfiend but also as my friend. Your love has been so nouishing to my life and i love that. Honestly i had to celebrate you...and i will celebrate you everyday.</p>
+            <p>I love your entire being, starting from your nose all the way to you heart.As i type this, it is raining and all i can think about is dancing in the rain with you all because i want to expirience every bit of life with you. My baby, i want us to grow old together, to have a life together.</p>
+            <p> My heart is not a deterministic system, it is a stochastic process, a random walk, that against all poability, found its home in you. Let us navigate the Brownian motion of life's uncetainties together, not as separate entities but as a coupled system.</p>
+            <p>Wanjiku ❤</p>
+        </div>
+        <div class="photo-gallery">
+            <img src="images/music/WhatsApp Image 2025-10-03 at 18.07.37_173f519a.jpg" alt="Couple photo 1" class="photo">
+            <p>Oh how i love your presence my love</p>
+            <img src="images/music/WhatsApp Image 2025-10-03 at 17.49.02_227896ea.jpg" alt="Couple photo 2" class="photo">
+            <p>My baby's smile is so beautiful i hope he keeps it forever</p>
+            <img src="images/music/WhatsApp Image 2025-10-03 at 17.46.42_f2734874.jpg" alt="Couple photo 3" class="photo">
+            <p>I love looking at you. You make me feel safe and loved.</p>
+        </div>
+        <button class="music-control" id="musicButton">
+            <span>play me</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+            </svg>
+        </button>
+    </div>
+    <footer>
+        Made with love for my baby
+    </footer>
+    <script>
+        function createHearts() {
+            const heartsContainer = document.getElementById('heartsContainer');
+            const heartCount = 30;
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                const left = Math.random() * 100;
+                const delay = Math.random() * 5;
+                const duration = 5 + Math.random() * 5;
+                heart.style.left = `${left}vw`;
+                heart.style.animationDelay = `${delay}s`;
+                heart.style.animationDuration = `${duration}s`;
+                heartsContainer.appendChild(heart);
+            }
+        }
+        const musicButton = document.getElementById('musicButton');
+        let audio = null;
+        let isPlaying = false;
+        const songUrl = "images/music/WhatsApp Audio 2025-10-03 at 17.54.58_70d52745.mp3";
+        musicButton.addEventListener('click', function() {
+            if (!audio) {
+                audio = new Audio(songUrl);
+                audio.loop = true;
+            }
+            if (isPlaying) {
+                audio.pause();
+                musicButton.innerHTML = '<span>play me</span><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>';
+            } else {
+                audio.play();
+                musicButton.innerHTML = '<span>pause me</span><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M14,19H18V5H14M6,19H10V5H6V19Z"/></svg>';
+            }
+            isPlaying = !isPlaying;
+        });
+        window.onload = function() {
+            createHearts();
+        };
+    </script>
+</body>
+</html>
